@@ -18,3 +18,15 @@ Confirm
 - [ ] Your commit messages are meaningful
 - [ ] You made the changes in a commit that relate to the commit message
 - [ ] You don't include changes in a commit that aren't related to the commit message
+
+#country has many travelers through users
+#country has many trips
+
+#trip belongs to a traveler(user)
+#trip belongs to a country
+
+#user has many visited countries
+#user has many trips
+
+#How can I create a new trip for a traveler(user)?
+#How can I query all the countries visited by a user?
