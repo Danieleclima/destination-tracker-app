@@ -11,6 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20190703161511) do
+
+  create_table "countries", force: :cascade do |t|
+    t.string  "name"
+    t.integer "user_id"
+    t.boolean "favourite_countries"
+    t.boolean "visited_countries"
+    t.boolean "bucket_list"
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string  "name"
+    t.date    "start_date"
+    t.date    "end_date"
+    t.integer "country_id"
+    t.integer "user_id"
+    t.string  "description"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+  end
 
 end
