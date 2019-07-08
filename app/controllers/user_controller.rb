@@ -16,6 +16,16 @@ get '/users/:id' do
     erb :'/user/show'
 end
 
+get '/users/:id/edit' do 
+    @user = User.find(params[:id])
+    erb :'/user/edit'
+end
 
+patch '/users/:id' do
+    binding.pry
+    @user = User.find(params[:id])
+    @user.update(params[:user])
+    redirect "users/#{@user.id}"
+end
 
 end
