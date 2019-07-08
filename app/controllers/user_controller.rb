@@ -22,10 +22,9 @@ get '/users/:id/edit' do
 end
 
 patch '/users/:id' do
-    binding.pry
     @user = User.find(params[:id])
     @user.update(params[:user])
     redirect "users/#{@user.id}"
-end
+end 
 
 end
