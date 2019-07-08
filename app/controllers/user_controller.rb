@@ -25,6 +25,12 @@ patch '/users/:id' do
     @user = User.find(params[:id])
     @user.update(params[:user])
     redirect "users/#{@user.id}"
-end 
+end
+
+delete '/users/:id' do 
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect "/"
+end
 
 end
