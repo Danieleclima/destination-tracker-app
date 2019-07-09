@@ -26,6 +26,15 @@
 
   <br>
 
-  <input type="submit" value="Create User">
+  <fieldset name="trip[country]" >
+     <label>Select country</label>
+     <select id = "myList">
+     <%Country.all.each_with_index do |c, index|%>
+      <option value = <%index+=1%> ><%=c.name%></option>
+      <%end%>
+     </select>
+</fieldset>
+
+  <input type="submit" value="Create Trip">
 
 </form>
