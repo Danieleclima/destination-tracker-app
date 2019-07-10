@@ -1,0 +1,2 @@
+Country.create(name:"Spain", user_id:1, favourite_countries: true, visited_countries: true, bucket_list: true)
+Country.create(name:"Germany", user_id:1, favourite_countries: false, visited_countries: false, bucket_list: false)

@@ -26,11 +26,11 @@
 
   <br>
 
-  <fieldset name="trip[country]" >
+<fieldset name="trip[country_id]" >
      <label>Select country</label>
      <select id = "myList">
      <%Country.all.each_with_index do |c, index|%>
-      <option value = <%index+=1%> ><%=c.name%></option>
+      <option value = <%index+=1%><%=c.name%></option>
       <%end%>
      </select>
 </fieldset>
