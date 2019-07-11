@@ -7,7 +7,6 @@ class TripController < ApplicationController
 
     post '/trips' do
        @trip =  Trip.create(params[:trip])
-       @country = Country.find(@trip.country_id)
        redirect "trips/#{@trip.id}"
     end
 

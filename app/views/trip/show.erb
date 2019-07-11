@@ -1,7 +1,19 @@
-<h1>@trip.name</h1>
+<h1><%=@trip.name%></h1>
 
 <label>Start date: <%=@trip.start_date%></label>
+
+<br>
+
 <label>End date: <%=@trip.start_date%></label>
-<label>Country: <%=@country.name%></label>
+
+<br>
+
+<label>Country: <%=Country.find(@trip.country_id).name%></label>
+
+<br>
+
 <label>start date: <%=@trip.start_date%></label>
+
+<br>
+
 <label>Description: <%=@trip.description%></label>
