@@ -29,8 +29,12 @@
 <fieldset >
      <label>Select country</label>
      <select name = "trip[country_id]" id = "myList">
+     <%countries = []%>
      <%Country.all.each_with_index do |c, index|%>
+      <%if !countries.include?(c.name)%>
       <option value =<%=c.id%>><%=c.name%></option>
+      <%countries << c.name%>
+      <%end%>
       <%end%>
      </select>
 </fieldset>
