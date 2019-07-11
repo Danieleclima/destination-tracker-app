@@ -7,7 +7,13 @@ class TripController < ApplicationController
 
     post '/trips' do
        @trip =  Trip.create(params[:trip])
-       binding.pry
+       @country = Country.find(@trip.country_id)
+       redirect "trips/#{@trip.id}"
+    end
+
+    get '/trips/:id' do
+        @trip = Trip.find(params[:id])
+        erb :'/trip/show'
     end
     
 end
