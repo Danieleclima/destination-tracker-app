@@ -1,5 +1,7 @@
 <h1>Create a new Trip</h1>
 
+<%if logged_in?%>
+
 <form action="/trips" method="POST">
 
   <label>Name:</label>
@@ -50,3 +52,7 @@
   <input type="submit" value="Create Trip">
 
 </form>
+
+<%else%>
+<h2>Please log in order to create a trip</h2>
+<%end%>
