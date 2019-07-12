@@ -41,6 +41,10 @@ post '/login' do
     else
     erb :error
     end
-    end
+end
+
+post '/users/new' do
+    redirect "/users/new" 
+end
 
 end
