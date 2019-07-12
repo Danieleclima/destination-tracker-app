@@ -1,6 +1,17 @@
 <h1>Welcome <%=@user.username%>!!</h1>
 
+<%if !current_user.trips.empty?%>
+<h2>Here's a list with your trips</h2>
+<%current_user.trips.each do |t|%>
+<h1><%=t.name%></h1>
+<%end%>
+<%else%>
+<h2>You haven't added any of your trips yet</h2>
+<%end%>
+
+<br>
+
 <form action="/users/<%=@user.id%>" method="post">
   <input type="hidden" name="_method" value="delete">  
-  <input type="submit" value="delete">
+  <input type="submit" value="delete account">
 </form>
