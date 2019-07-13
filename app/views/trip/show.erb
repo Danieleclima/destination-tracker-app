@@ -4,7 +4,7 @@
 
 <br>
 
-<label>End date: <%=@trip.start_date%></label>
+<label>End date: <%=@trip.end_date%></label>
 
 <br>
 
@@ -17,3 +17,10 @@
 <br>
 
 <label>Description: <%=@trip.description%></label>
+
+<br>
+
+<form action="/trips/<%=@trip.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">  
+  <input type="submit" value="delete trip">
+</form>
