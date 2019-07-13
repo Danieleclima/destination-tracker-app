@@ -47,6 +47,9 @@ post '/users/new' do
     redirect "/users/new" 
 end
 
-
+get '/logout' do
+    session.clear
+    redirect '/'
+end
 
 end
