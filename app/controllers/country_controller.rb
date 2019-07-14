@@ -5,5 +5,9 @@ class CountryController < ApplicationController
        erb :'/country/show' 
     end
 
+    post '/countries' do
+        @country =  Country.create(params[:country])
+        redirect "/countries"
+     end
 
 end

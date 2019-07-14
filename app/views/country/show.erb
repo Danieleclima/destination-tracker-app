@@ -7,14 +7,15 @@
     <h2><%=c.name%></h2>
     <%countries << c.name%>
     <%if logged_in?%>
-    <form action="/countries/new" method="POST"> 
+    <form action="/countries" method="post"> 
     <input type="checkbox" name="country[favorite_countries]" value="true" id="true">Add to my favourite countries </input>
     <input type="checkbox" name="country[visited_countries]" value="true" id="true">Add to my visited countries </input>
     <input type="checkbox" name="country[bucket_list]" value="true" id="true">Add to my bucket list </input>
     <input type="hidden" name="country[user_id]" value="<%=current_user.id%>">
-    <input type="hidden" name="country[name]" value="<%=c.name%>">  
+    <input type="hidden" name="country[name]" value="<%=c.name%>">
+    <input type="submit" value="Save">
     </form>
-    <%end%>
 </div>
+    <%end%>
 <%end%>
 <%end%>
