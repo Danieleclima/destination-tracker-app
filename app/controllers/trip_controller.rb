@@ -15,6 +15,11 @@ class TripController < ApplicationController
         erb :'/trip/show'
     end
 
+    get '/users/:id/edit' do 
+        @trip = Trip.find(params[:id])
+        erb :'/trip/edit'
+    end
+
     delete '/trips/:id' do
         @trip = Trip.find(params[:id]) 
         @trip.destroy 
