@@ -3,7 +3,12 @@
 <%if !current_user.trips.empty?%>
 <h2>Here's a list with your trips</h2>
 <%current_user.trips.each do |t|%>
-<h1><%=t.name%></h1>
+  <div>
+<h3><%=t.name%></h3>
+<p>Start date:<%=t.start_date%></p>
+<p>End date:<%=t.end_date%></p>
+<p>Description:<%=t.description%></p>
+</div>
 <%end%>
 <%else%>
 <h2>You haven't added any trips yet</h2>
