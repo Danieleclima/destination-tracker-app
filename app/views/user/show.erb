@@ -4,7 +4,7 @@
 <h2>Here's a list with your trips</h2>
 <%current_user.trips.each do |t|%>
   <div>
-<h3><%=t.name%></h3>
+<h3><a href="/trips/<%=t.id%>"><%=t.name%></a></h3>
 <p>Start date:<%=t.start_date%></p>
 <p>End date:<%=t.end_date%></p>
 <p>Description:<%=t.description%></p>
