@@ -10,13 +10,44 @@
  
   <br>
  
-  <label>password:</label>
+  <label>Start date:</label>
  
   <br>
  
-  <input type="text" name="user[password]" id="password" value="<%=@user.password%>">
+  <input type="date" name="trip[start_date]" id="start_date" value="<%=@trip.start_date%>">
  
   <br>
 
-  <input type="submit" value="Update User">
+  <label>End date:</label>
+
+  <br>
+
+  <input type="date" name="trip[end_date]" id="end_date" value="<%=@trip.end_date%>">
+ 
+  <br>
+
+  <fieldset >
+     <label>Select country</label>
+     <select name = "trip[country_id]" id = "myList">
+     <%countries = []%>
+     <%Country.all.sort.each_with_index do |c, index|%>
+      <%if !countries.include?(c.name)%>
+      <option value =<%=c.id%>><%=c.name%></option>
+      <%countries << c.name%>
+      <%end%>
+      <%end%>
+     </select>
+</fieldset>
+
+<br>
+
+<label>Description:</label>
+
+<br>
+
+<input type="string" name="trip[description]">
+
+<br>
+
+  <input type="submit" value="Update trip">
 </form>
