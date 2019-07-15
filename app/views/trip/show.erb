@@ -28,3 +28,8 @@
 <br>
 
 <a href="/trips/<%=@trip.id%>/edit">Log Out</a>
+
+<form action="/users/<%=@trip.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">  
+  <input type="submit" value="delete trip">
+</form>

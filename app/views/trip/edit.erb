@@ -2,11 +2,11 @@
 
 <form action="/trips/<%=@trip.id%>" method="post">
   <input type="hidden" name="_method" value="patch">  
-  <label>username:</label>
+  <label>name:</label>
  
   <br>
  
-  <input type="text" name="trip[name]" id="user_name" value="<%=@user.username%>">
+  <input type="text" name="trip[name]" id="trip_name" value="<%=@trip.name%>">
  
   <br>
  
