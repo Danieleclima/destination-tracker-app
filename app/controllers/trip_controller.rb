@@ -22,7 +22,8 @@ class TripController < ApplicationController
 
     delete '/trips/:id' do
         @trip = Trip.find(params[:id]) 
-        @trip.destroy 
+        @trip.destroy
+        redirect "/users/#{current_user.id}"
     end
     
 end
