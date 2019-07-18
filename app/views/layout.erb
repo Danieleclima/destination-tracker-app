@@ -8,12 +8,16 @@
     <div class="container">
 
     <%if logged_in?%>
+    <nav>
     <a href='/'>Home</a>
     <a href='/users/<%="#{current_user.id}"%>'>My account</a>
     <a href='/trips/new'>New trip</a>
     <a href="/logout">Log Out</a>
+    </nav>
     <%end%>
+    <nav>
     <a href='countries'>Countries</a>
+    </nav>
  
       <%= yield %>
  
