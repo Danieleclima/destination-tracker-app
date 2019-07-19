@@ -30,6 +30,21 @@
 
 <br>
 
+<%favourite_countries = current_user.countries.select do |c|%>
+<%c.favourite_countries == true%>
+<%end%>
+<%if !favourite_countries.empty?%>
+<h3>Here's a list with your favourite countries</h3>
+<%favourite_countries.each do |c|%>
+  <div class="country">
+  <%=c.name%>
+  </div>
+<%end%> 
+<%end%>
+
+
+<br>
+
 <a href="/logout">Log Out</a>
 
 <br>
@@ -38,4 +53,5 @@
   <input type="hidden" name="_method" value="delete">  
   <input type="submit" value="delete account">
 </form>
+
 </body>
