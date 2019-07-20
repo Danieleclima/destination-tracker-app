@@ -59,6 +59,20 @@
   
 <br>
 
+<%=bucket_list = current_user.countries.select do |c|%>
+  <%c.bucket_list == true%>
+  <%end%>
+  <%if !bucket_list.empty?%>
+  <h3>Here's a list with all the countries you have been to so far!</h3>
+  <%bucket_list.each do |c|%>
+    <div class="country">
+    <%=c.name%>
+    </div>
+  <%end%> 
+  <%end%>
+
+<br>
+
 <a href="/logout">Log Out</a>
 
 <br>
