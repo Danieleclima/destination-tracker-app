@@ -42,7 +42,21 @@
 <%end%> 
 <%end%>
 
+<br>
 
+<%visited_countries = current_user.countries.select do |c|%>
+  <%c.visited_countries == true%>
+  <%end%>
+  <%if !visited_countries.empty?%>
+  <h3>Here's a list with all the countries you have been to so far!</h3>
+  <%visited_countries.each do |c|%>
+    <div class="country">
+    <%=c.name%>
+    </div>
+  <%end%> 
+  <%end%>
+
+  
 <br>
 
 <a href="/logout">Log Out</a>
