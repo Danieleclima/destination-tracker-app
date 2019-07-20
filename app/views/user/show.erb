@@ -48,7 +48,7 @@
   <%c.visited_countries == true%>
   <%end%>
   <%if !visited_countries.empty?%>
-  <h3>Here's a list with all the countries you have been to so far!</h3>
+  <h3>A list with all the countries you have been to so far!</h3>
   <%visited_countries.each do |c|%>
     <div class="country">
     <%=c.name%>
@@ -59,11 +59,11 @@
   
 <br>
 
-<%=bucket_list = current_user.countries.select do |c|%>
+<%bucket_list = current_user.countries.select do |c|%>
   <%c.bucket_list == true%>
   <%end%>
   <%if !bucket_list.empty?%>
-  <h3>Here's a list with all the countries you have been to so far!</h3>
+  <h3>These are all the countries on your bucket list!</h3>
   <%bucket_list.each do |c|%>
     <div class="country">
     <%=c.name%>
